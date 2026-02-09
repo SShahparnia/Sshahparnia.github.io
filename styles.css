@@ -270,6 +270,13 @@ h5 {
   transform: scale(1.1);
 }
 
+.experience-logo {
+  max-width: 80px;
+  height: auto;
+  margin: 0 auto 8px;
+  display: block;
+}
+
 /* Projects */
 .row-publication {
   margin-bottom: 3rem;
