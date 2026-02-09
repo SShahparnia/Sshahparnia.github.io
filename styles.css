@@ -5,18 +5,17 @@
 }
 
 :root {
-  --bg-color: #faf8f5;
-  --font-color: #1c1c1c;
-  --font-muted: #4a4a4a;
-  --navbar-link-color: #1c1c1c;
-  --navbar-hover-link-color: #0d7377;
-  --time-color: #5c5c5c;
-  --link-color: #0d7377;
-  --hover-link-color: #095c5f;
-  --accent: #0d7377;
-  --border-color: #e8e4df;
-  --font-serif: "Source Serif 4", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --bg-color: #fff;
+  --font-color: #000;
+  --font-muted: #444;
+  --navbar-link-color: #000;
+  --navbar-hover-link-color: #333;
+  --time-color: #444;
+  --link-color: #000;
+  --hover-link-color: #333;
+  --accent: #000;
+  --border-color: #000;
+  --font-main: "Source Serif Pro", Georgia, serif;
 }
 
 html {
@@ -27,7 +26,7 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
-  font-family: var(--font-serif);
+  font-family: var(--font-main);
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.65;
@@ -57,13 +56,20 @@ p:last-of-type {
 }
 
 section {
-  border-top: 1px solid var(--border-color);
-  padding-top: 1.75em;
-  padding-bottom: 1.75em;
+  border-image: linear-gradient(
+    to right,
+    var(--bg-color),
+    var(--font-color),
+    var(--bg-color)
+  ) 10 0 10 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 section:first-of-type {
-  border-top-width: 0px;
+  border-top-width: 0;
 }
 
 .page {
@@ -78,21 +84,19 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: var(--font-sans);
-  font-variant: normal;
+  font-family: var(--font-main);
   text-align: center;
-  font-size: 1.75rem;
+  font-variant: small-caps;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 20px;
-  letter-spacing: -0.02em;
   color: var(--font-color);
 }
 
 .my-name {
-  font-size: 2.25em;
+  font-size: 2.5em;
   margin-top: 10px;
-  margin-bottom: 0px;
-  font-weight: 700;
+  margin-bottom: 0;
 }
 
 .headshot-figure {
@@ -148,24 +152,31 @@ h5 {
 .nav-background {
   z-index: 1;
   background-color: var(--bg-color);
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-image: linear-gradient(
+    to right,
+    var(--bg-color),
+    var(--font-color),
+    var(--bg-color)
+  ) 10 0 10 0;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
 }
 
 .nav-bar {
   padding-top: 12pt;
   padding-bottom: 12pt;
   padding-left: 20px;
+  padding-right: 20px;
   position: relative;
-  max-width: 680px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .nav-bar ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 2px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0;
 }
 
 .nav-bar li {
@@ -177,16 +188,71 @@ h5 {
 .nav-bar li a:visited {
   text-decoration: none;
   color: var(--navbar-link-color);
-  font-family: var(--font-sans);
-  font-variant: normal;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-family: var(--font-main);
+  font-variant: small-caps;
   transition: color 0.2s ease;
 }
 
 .nav-bar li a:hover,
 .nav-bar li a:visited:hover {
-  color: var(--accent);
+  color: var(--navbar-hover-link-color);
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--font-color);
+  background: var(--bg-color);
+  color: var(--font-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.dark-mode-toggle:hover {
+  background: var(--font-color);
+  color: var(--bg-color);
+}
+
+.dark-mode-toggle .icon-moon {
+  display: none;
+}
+
+.dark-mode-toggle .icon-sun {
+  display: inline;
+}
+
+/* Dark mode: show moon when dark, sun when light */
+body.dark .dark-mode-toggle .icon-sun {
+  display: none;
+}
+
+body.dark .dark-mode-toggle .icon-moon {
+  display: inline;
+}
+
+/* Dark theme */
+body.dark {
+  --bg-color: #1a1a1a;
+  --font-color: #e8e8e8;
+  --font-muted: #a0a0a0;
+  --navbar-link-color: #e8e8e8;
+  --navbar-hover-link-color: #fff;
+  --time-color: #a0a0a0;
+  --link-color: #e8e8e8;
+  --hover-link-color: #fff;
+  --accent: #e8e8e8;
+  --border-color: #333;
 }
 
 .row-experience {
@@ -214,13 +280,13 @@ h5 {
 .timespan time {
   margin-top: 10px;
   color: var(--time-color);
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
 }
 
 .timespan .timespan-text {
   color: var(--time-color);
   margin-top: 10px;
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
 }
 
 .timespan:before {
@@ -260,6 +326,28 @@ h5 {
 
 .experience-desc li {
   margin-bottom: 0.4em;
+}
+
+.experience-desc .related-coursework {
+  margin-top: 0.6em;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: var(--font-muted);
+}
+
+.related-coursework-block {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.related-coursework-block .related-coursework {
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+
+.related-coursework-block .related-coursework:first-child {
+  margin-top: 0;
 }
 
 .logo-img {
@@ -315,7 +403,7 @@ h5 {
   line-height: 1.3;
   text-align: left;
   font-variant: normal;
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
   font-weight: 600;
   color: var(--font-color);
 }
@@ -335,7 +423,7 @@ h5 {
   font-size: 0.9rem;
   margin-bottom: 0px;
   color: var(--font-muted);
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
 }
 
 .publication-summary {
@@ -391,9 +479,16 @@ h5 {
 }
 
 .website-footer {
-  border-top: 1px solid var(--border-color);
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  border-image: linear-gradient(
+    to right,
+    var(--bg-color),
+    var(--font-color),
+    var(--bg-color)
+  ) 10 0 0 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin-top: 30px;
 }
 
@@ -417,7 +512,7 @@ h5 {
   text-decoration: none;
   color: var(--font-muted);
   font-size: 1rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
   transition: color 0.2s ease;
 }
 

@@ -9,12 +9,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-if (toggle && navLinks) {
-  toggle.addEventListener('click', () => navLinks.classList.toggle('is-open'));
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('is-open'));
+// Dark mode toggle
+const darkModeToggle = document.querySelector('.dark-mode-toggle');
+const STORAGE_KEY = 'shervan-site-theme';
+
+function setDarkMode(isDark) {
+  document.body.classList.toggle('dark', isDark);
+  try { localStorage.setItem(STORAGE_KEY, isDark ? 'dark' : 'light'); } catch (_) {}
+}
+
+function initTheme() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === 'dark') setDarkMode(true);
+    else if (saved === 'light') setDarkMode(false);
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDarkMode(true);
+  } catch (_) {}
+}
+
+if (darkModeToggle) {
+  darkModeToggle.addEventListener('click', () => {
+    setDarkMode(!document.body.classList.contains('dark'));
   });
 }
+
+initTheme();
