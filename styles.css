@@ -680,3 +680,118 @@ body.dark {
 .blog-post-body p:last-of-type {
   margin-bottom: 0;
 }
+
+/* Climbing page */
+.table-scroll {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.send-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.send-table th,
+.send-table td {
+  text-align: left;
+  padding: 0.45rem 0.75rem 0.45rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.send-table th {
+  font-weight: 600;
+}
+
+.send-table td:nth-child(2) {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.trip-photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.blog-post-body h3 {
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* Nav: wrap instead of overflowing on narrow screens, leave room for the toggle */
+.nav-bar {
+  padding-right: 4rem;
+}
+
+.nav-bar ul {
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+}
+
+.nav-bar li a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media only screen and (max-width: 720px) {
+  .nav-bar li {
+    padding-right: 14px;
+  }
+
+  .page {
+    margin-top: 110px;
+  }
+}
+
+/* Make in-text links visible against body text */
+.page p a,
+.page li a:not([class]) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--font-muted);
+}
+
+/* Experience bullets */
+.exp-bullets {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.exp-bullets li {
+  margin-bottom: 0.35rem;
+}
+
+/* Skills with logos */
+.skill-group-title {
+  font-size: 1.1rem;
+  text-align: left;
+  margin: 1.25rem 0 0.6rem;
+}
+
+.skill-grid {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--font-color);
+}
+
+.skill-chip i {
+  font-size: 1.15rem;
+  width: 1.15rem;
+  text-align: center;
+  color: var(--font-muted);
+}

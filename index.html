@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body class="dark">
     <div class="nav-div">
         <div class="nav-background">
             <nav class="nav-bar">
@@ -20,11 +21,11 @@
                     <li><a href="#sec-about">Home</a></li>
                     <li><a href="#sec-education">Education</a></li>
                     <li><a href="#sec-experience">Experience</a></li>
-                    <li><a href="#sec-projects">Personal Projects</a></li>
-                    <li><a href="#sec-academic-projects">Academic Projects</a></li>
-                    <li><a href="#sec-skills">Technical Skills</a></li>
-                    <li><a href="#sec-climbing">Climbing</a></li>
+                    <li><a href="#sec-projects">Projects</a></li>
+                    <li><a href="#sec-skills">Skills</a></li>
                     <li><a href="blog/">Blog</a></li>
+                    <li><a href="climbing/">Climbing</a></li>
+                    <li><a href="achievements/">Achievements</a></li>
                 </ul>
                 <button type="button" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
                     <span class="icon-sun" aria-hidden="true">☀</span>
@@ -63,8 +64,8 @@
                 </div>
                 <div class="experience-desc">
                     <strong>San Jose State University</strong>, San Jose, CA<br>
-                    Master of Science in Artificial Intelligence, GPA: 3.30/4.00
-                    <p class="related-coursework"><strong>Related coursework:</strong> Machine Learning (CMPE 257), Reinforcement Learning (CMPE 260), AI &amp; Data Engineering (CMPE 252), Database Systems (CMPE 180B), Operating Systems (CMPE 180C).</p>
+                    Master of Science in Artificial Intelligence
+                    <p class="related-coursework"><strong>Related coursework:</strong> Machine Learning (CMPE 257), Reinforcement Learning (CMPE 260), AI &amp; Data Engineering (CMPE 252), Database Systems (CMPE 180B), Operating Systems (CMPE 180C), Intelligent Autonomous Systems (CMPE 249).</p>
                 </div>
             </div>
             <div class="row-experience">
@@ -76,7 +77,7 @@
                 </div>
                 <div class="experience-desc">
                     <strong>San Jose State University</strong>, San Jose, CA<br>
-                    Bachelor of Science in Data Science, GPA: 3.63/4.00 (Dean's Scholar)
+                    Bachelor of Science in Data Science (Dean's Scholar)
                     <p class="related-coursework"><strong>Related coursework:</strong> Intro to Artificial Intelligence (CS 156), Intro to Machine Learning (CS 171), Intro to Database Management Systems (CS 157A), Data Visualization (CS 133), Processing Big Data (CS 131), Data Structures &amp; Algorithms (CS 146), Applied Probability &amp; Statistics I (MATH 161A), R Programming (MATH 167R).</p>
                 </div>
             </div>
@@ -93,7 +94,12 @@
                 </div>
                 <div class="experience-desc">
                     <strong>Operations Engineering Intern</strong>, Zoll Medical, San Jose, CA
-                    <p>Deployed Cognex vision hardware and software to automate inspection, cutting QC checks and cycle time by 15%. Leveraged SQL and Python to aggregate BOM data in Oracle Cloud PLM, assessing eIFU digitization feasibility. Applied Python COM port scripting to automate equipment data collection, streamlining maintenance scheduling.</p>
+                    <ul class="exp-bullets">
+                        <li>Deployed a <strong>Cognex In-Sight</strong> vision system to production, automating <strong>3</strong> battery inspection checks (solder, switch, and cell orientation) and cutting QC cycle time by <strong>15%</strong>.</li>
+                        <li>Authored and routed <strong>5 DCOs</strong> in <strong>MQMS</strong>, managing controlled document revisions.</li>
+                        <li>Aggregated <strong>20M+</strong> BOM lines across <strong>1,000+</strong> SKUs in <strong>Oracle Cloud PLM</strong> (SQL, Python) for eIFU.</li>
+                        <li>Built a <strong>Python COM port</strong> mapping tool (VID/PID detection) for manufacturing-critical equipment.</li>
+                    </ul>
                 </div>
             </div>
             <div class="row-experience">
@@ -105,7 +111,10 @@
                 </div>
                 <div class="experience-desc">
                     <strong>AI Fellow</strong>, Handshake AI, Remote
-                    <p>Completed 10+ weekly AI code evaluation tasks, reviewing LLM-generated code and validating outputs against reference solutions to identify correctness, reliability, and edge-case failures. Reviewed and labeled 30+ weekly speech and multimodal outputs, identifying transcription, punctuation, speaker attribution, and alignment errors to improve data quality and pipeline accuracy.</p>
+                    <ul class="exp-bullets">
+                        <li>Complete <strong>10+</strong> weekly AI code evaluation tasks, reviewing <strong>LLM-generated code</strong> against reference solutions for correctness, reliability, and edge-case failures.</li>
+                        <li>Review and label <strong>30+</strong> weekly speech and multimodal outputs, catching transcription, punctuation, speaker attribution, and alignment errors.</li>
+                    </ul>
                 </div>
             </div>
             <div class="row-experience">
@@ -116,8 +125,11 @@
                     </div>
                 </div>
                 <div class="experience-desc">
-                    <strong>Machine Learning Project Lead</strong>, AI &amp; Machine Learning Club, SJSU, San Jose, CA
-                    <p>Led a 6-member team building IntelliTrainer, a real-time pose analysis platform using MediaPipe, FastAPI, and Next.js. Benchmarked CNN, RNN, and transformer models, reducing form misclassification by 30%. Improved inference with local MediaPipe processing and temporal smoothing, cutting frame drops by 40%. Reduced pose-data bandwidth by 70% and designed a scalable containerized backend.</p>
+                    <strong>Machine Learning Project Lead</strong>, AI/ML@SJSU, San Jose, CA
+                    <ul class="exp-bullets">
+                        <li>Led a <strong>6-member</strong> team building IntelliTrainer, a real-time pose analyzer (<strong>MediaPipe</strong>, <strong>FastAPI</strong>, <strong>Next.js</strong>).</li>
+                        <li>Benchmarked CNN, RNN, and transformer models, cutting misclassification <strong>30%</strong> and frame drops <strong>40%</strong>.</li>
+                    </ul>
                 </div>
             </div>
             <div class="row-experience">
@@ -128,13 +140,32 @@
                 </div>
                 <div class="experience-desc">
                     <strong>Business Analytics Intern</strong>, Shadi Gala (Event Services), San Jose, CA
-                    <p>Utilized SQL and Python to build workflows across 500+ transactions, improving trend identification and forecasting accuracy. Optimized SEO and DNS configurations to increase search visibility by 60%, driving a 90% increase in ticket sales.</p>
+                    <ul class="exp-bullets">
+                        <li>Built <strong>SQL</strong> and <strong>Python</strong> workflows across <strong>500+</strong> transactions, improving trend detection and forecasting.</li>
+                        <li>Optimized <strong>SEO</strong> and <strong>DNS</strong> configurations, raising search visibility <strong>60%</strong> and ticket sales <strong>90%</strong>.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="sec-projects">
             <h2>Personal Projects</h2>
+            <div class="row-publication">
+                <div class="publication-header">
+                    <div class="pub-meta" style="margin-left: 0;">
+                        <div>
+                            <h3 class="paper-title">IntelliTrainer</h3>
+                            <ul>
+                                <li><a href="https://github.com/SShahparnia/intelli-trainer" class="fa-brands fa-github" aria-label="GitHub repo"></a></li>
+                            </ul>
+                            <h4 class="paper-journal">2025 · Python, MediaPipe, OpenCV</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-summary">
+                    Real-time <strong>computer vision</strong> fitness tracker that uses <strong>MediaPipe Pose</strong> and <strong>OpenCV</strong> to count reps for bicep curls, shoulder presses, pushups, and squats from a webcam. It computes joint angles at the elbow and knee to detect rep cycles, tracks each arm separately, and draws live feedback on the camera feed. This prototype became the AI &amp; ML Club project I later led.
+                </div>
+            </div>
             <div class="row-publication">
                 <div class="publication-header">
                     <div class="pub-meta" style="margin-left: 0;">
@@ -190,6 +221,40 @@
 
         <section id="sec-academic-projects">
             <h2>Academic Projects</h2>
+            <div class="row-publication">
+                <div class="publication-header">
+                    <div class="pub-meta" style="margin-left: 0;">
+                        <div>
+                            <h3 class="paper-title">Master's Project: Multi-Robot Ethical Gating with LLM Agents</h3>
+                            <h4 class="paper-journal">In Progress · ROS 2, Gazebo, Python</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-summary">
+                    <ul class="exp-bullets">
+                        <li>Lead and architect of a <strong>4-member</strong> team building a 5-tier <strong>ROS 2 / Gazebo</strong> system where robot <strong>LLM agents</strong> negotiate plans that an ethical gatekeeper and <strong>CBF safety filter</strong> vet before execution.</li>
+                        <li>Designed a provider-agnostic <strong>agentic workflow</strong> with pydantic-validated plans and constraint-driven replanning.</li>
+                        <li>Scaling an <strong>840+</strong> episode experiment grid on <strong>SJSU HPC</strong> via Apptainer and Slurm job arrays.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row-publication">
+                <div class="publication-header">
+                    <div class="pub-meta" style="margin-left: 0;">
+                        <div>
+                            <h3 class="paper-title">ExploreBench</h3>
+                            <ul>
+                                <li><a href="https://github.com/SShahparnia/cmpe249_project" class="fa-brands fa-github" aria-label="GitHub repo"></a></li>
+                            </ul>
+                            <h4 class="paper-journal">2026 · ROS 2, Nav2, Gazebo, NVIDIA Jetson Orin Nano</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-summary">
+                    Course project (CMPE 249 Intelligent Autonomous Systems) with Joey Manivong and Aaron Sam. A reproducible <strong>benchmarking harness</strong> for 2D autonomous exploration in <strong>ROS 2 Jazzy</strong> and <strong>Gazebo Harmonic</strong>, comparing four frontier-selection strategies behind one common interface.
+                    A controlled study of about <strong>1,300 simulated episodes</strong> across five environment topologies reports coverage over time and distance with bootstrap confidence intervals. It also profiles each strategy's decision latency, memory, and power <strong>hardware-in-the-loop</strong> on a Jetson Orin Nano. I own simulation and infrastructure, evaluation, and the Jetson deployment.
+                </div>
+            </div>
             <div class="row-publication">
                 <div class="publication-header">
                     <div class="pub-meta" style="margin-left: 0;">
@@ -296,36 +361,66 @@
 
         <section id="sec-skills">
             <h2>Technical Skills</h2>
-            <ul class="skills-list">
-                <li><strong>Languages:</strong> Python, JavaScript, SQL, C++, R</li>
-                <li><strong>ML &amp; CV:</strong> PyTorch, TensorFlow, Scikit-learn, MediaPipe, OpenCV, MiniLM</li>
-                <li><strong>AI &amp; LLMs:</strong> LangChain, Hugging Face, OpenAI API, ChromaDB; RAG, embeddings, fine-tuning</li>
-                <li><strong>Frameworks:</strong> FastAPI, Next.js, React, Node.js, Tailwind CSS, Three.js, Plotly Dash</li>
-                <li><strong>Cloud &amp; Data:</strong> GCP, AWS, Vercel; BigQuery, PostgreSQL, MySQL</li>
-                <li><strong>Tools:</strong> Git, Docker, Cursor, VS Code, Linux, Ubuntu, Postman</li>
+            <h3 class="skill-group-title">Languages &amp; Frameworks</h3>
+            <ul class="skill-grid">
+                <li class="skill-chip"><i class="devicon-python-plain" aria-hidden="true"></i><span>Python</span></li>
+                <li class="skill-chip"><i class="devicon-javascript-plain" aria-hidden="true"></i><span>JavaScript</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-database" aria-hidden="true"></i><span>SQL</span></li>
+                <li class="skill-chip"><i class="devicon-r-plain" aria-hidden="true"></i><span>R</span></li>
+                <li class="skill-chip"><i class="devicon-csharp-plain" aria-hidden="true"></i><span>C#</span></li>
+                <li class="skill-chip"><i class="devicon-fastapi-plain" aria-hidden="true"></i><span>FastAPI</span></li>
+                <li class="skill-chip"><i class="devicon-nextjs-plain" aria-hidden="true"></i><span>Next.js</span></li>
+                <li class="skill-chip"><i class="devicon-react-original" aria-hidden="true"></i><span>React</span></li>
+                <li class="skill-chip"><i class="devicon-nodejs-plain" aria-hidden="true"></i><span>Node.js</span></li>
             </ul>
-        </section>
-
-        <section id="sec-climbing">
-            <h2>Climbing</h2>
-            <p>I love bouldering, and my focus is on sending hard boulders outdoors. My current goals are to send V11 indoors and to hit +120% max pull-up. Here is some of my climbing-related media:</p>
-            <p><strong>Favorite outdoor sends:</strong></p>
-            <ul class="skills-list">
-                <li>The Beak (V3), Castle Rock State Park</li>
-                <li>The Beak Mantle (V5), Castle Rock State Park</li>
-                <li>The Ramp (V4), Mortar Rock Park, Berkeley</li>
-                <li>Sunshine (V5), Mortar Rock Park, Berkeley</li>
+            <h3 class="skill-group-title">ML &amp; Vision</h3>
+            <ul class="skill-grid">
+                <li class="skill-chip"><i class="devicon-pytorch-original" aria-hidden="true"></i><span>PyTorch</span></li>
+                <li class="skill-chip"><i class="devicon-tensorflow-original" aria-hidden="true"></i><span>TensorFlow</span></li>
+                <li class="skill-chip"><i class="devicon-scikitlearn-plain" aria-hidden="true"></i><span>scikit-learn</span></li>
+                <li class="skill-chip"><i class="devicon-opencv-plain" aria-hidden="true"></i><span>OpenCV</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-person-running" aria-hidden="true"></i><span>MediaPipe</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-camera" aria-hidden="true"></i><span>Cognex In-Sight</span></li>
             </ul>
-        </section>
-
-        <section id="sec-blog">
-            <h2>Blog</h2>
-            <p>Notes and reflections on events, talks, and experiences—similar to what I share on <a href="https://www.linkedin.com/in/shervan-shahparnia/">LinkedIn</a>.</p>
-            <p><a href="blog/">View all posts →</a></p>
+            <h3 class="skill-group-title">AI &amp; Agentic</h3>
+            <ul class="skill-grid">
+                <li class="skill-chip"><i class="fa-solid fa-network-wired" aria-hidden="true"></i><span>Multi-Agent LLM Systems</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-robot" aria-hidden="true"></i><span>OpenAI / Anthropic APIs</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>vLLM</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-link" aria-hidden="true"></i><span>LangChain</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>RAG</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-terminal" aria-hidden="true"></i><span>Claude Code</span></li>
+            </ul>
+            <h3 class="skill-group-title">Robotics</h3>
+            <ul class="skill-grid">
+                <li class="skill-chip"><i class="devicon-ros-original" aria-hidden="true"></i><span>ROS 2 (rclpy)</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-cube" aria-hidden="true"></i><span>Gazebo</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span>Control Barrier Functions</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Foxglove</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-file-waveform" aria-hidden="true"></i><span>MCAP</span></li>
+            </ul>
+            <h3 class="skill-group-title">Tools &amp; Cloud</h3>
+            <ul class="skill-grid">
+                <li class="skill-chip"><i class="devicon-git-plain" aria-hidden="true"></i><span>Git</span></li>
+                <li class="skill-chip"><i class="devicon-docker-plain" aria-hidden="true"></i><span>Docker</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-box" aria-hidden="true"></i><span>Apptainer</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-server" aria-hidden="true"></i><span>Slurm / HPC</span></li>
+                <li class="skill-chip"><i class="devicon-linux-plain" aria-hidden="true"></i><span>Linux</span></li>
+                <li class="skill-chip"><i class="devicon-googlecloud-plain" aria-hidden="true"></i><span>Google Cloud</span></li>
+                <li class="skill-chip"><i class="devicon-amazonwebservices-plain" aria-hidden="true"></i><span>AWS</span></li>
+                <li class="skill-chip"><i class="devicon-postgresql-plain" aria-hidden="true"></i><span>PostgreSQL</span></li>
+            </ul>
+            <h3 class="skill-group-title">Quality &amp; PLM</h3>
+            <ul class="skill-grid">
+                <li class="skill-chip"><i class="fa-solid fa-code-branch" aria-hidden="true"></i><span>DCO/ECO Change Control</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i><span>MQMS</span></li>
+                <li class="skill-chip"><i class="devicon-oracle-original" aria-hidden="true"></i><span>Oracle Cloud PLM</span></li>
+                <li class="skill-chip"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span>Document Lifecycle</span></li>
+            </ul>
         </section>
 
         <footer class="website-footer">
-            <p class="author">By Shervan Shahparnia, 2025</p>
+            <p class="author">By Shervan Shahparnia, 2026</p>
         </footer>
     </div>
     <script src="script.js"></script>

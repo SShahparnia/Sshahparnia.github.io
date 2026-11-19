@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Climbing — Shervan Shahparnia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="dark">
+    <div class="nav-div">
+        <div class="nav-background">
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="../#sec-about">Home</a></li>
+                    <li><a href="../#sec-education">Education</a></li>
+                    <li><a href="../#sec-experience">Experience</a></li>
+                    <li><a href="../#sec-projects">Projects</a></li>
+                    <li><a href="../#sec-skills">Skills</a></li>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../climbing/" aria-current="page">Climbing</a></li>
+                    <li><a href="../achievements/">Achievements</a></li>
+                </ul>
+                <button type="button" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <span class="icon-sun" aria-hidden="true">☀</span>
+                    <span class="icon-moon" aria-hidden="true">☽</span>
+                </button>
+            </nav>
+        </div>
+    </div>
+    <div class="page">
+        <section id="climbing-intro">
+            <h2>Climbing</h2>
+            <p>I love bouldering, and my focus is on sending hard boulders outdoors. These are write-ups from my climbing trips: areas, conditions, sends, and lessons learned. My goals and notable sends are on the <a href="../achievements/">Achievements page</a>.</p>
+        </section>
+
+        <section id="climbing-trips">
+            <h3>Trip Reports</h3>
+            <!--
+                To add a trip report:
+                1. Copy climbing/trip-template.html to climbing/<trip-name>.html and fill it in.
+                2. Add an entry below (newest first), then delete the "No trip reports yet" line:
+                <li class="blog-entry">
+                    <span class="blog-date">Month Day, Year · Area, State</span>
+                    <strong class="blog-title"><a href="trip-name.html">Trip Title</a></strong>
+                    <p class="blog-excerpt">One or two sentence summary.</p>
+                    <p class="blog-excerpt"><a href="trip-name.html">Read more →</a></p>
+                </li>
+            -->
+            <ul class="blog-list">
+            </ul>
+            <p class="blog-empty-message">No trip reports yet. Check back soon.</p>
+        </section>
+
+        <footer class="website-footer">
+            <p class="author"><a href="../">← Back to home</a></p>
+        </footer>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -21,9 +21,8 @@ function setDarkMode(isDark) {
 function initTheme() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved === 'dark') setDarkMode(true);
-    else if (saved === 'light') setDarkMode(false);
-    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDarkMode(true);
+    // Dark by default; only switch to light if the visitor chose it.
+    document.body.classList.toggle('dark', saved !== 'light');
   } catch (_) {}
 }
 
