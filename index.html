@@ -242,6 +242,24 @@
                 <div class="publication-header">
                     <div class="pub-meta" style="margin-left: 0;">
                         <div>
+                            <h3 class="paper-title">Park Check</h3>
+                            <h4 class="paper-journal">2026 · CMPE 259 · Python, OpenAI tool calling, NPS API, Streamlit</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-summary">
+                    A trip-planning assistant for <strong>20 California national park sites</strong> that answers from live <strong>NPS Data API</strong> and <strong>National Weather Service</strong> data through <strong>9 tools</strong>, with a Streamlit demo app.
+                    <ul class="exp-bullets">
+                        <li>Evaluated whether tool grounding reduces made-up answers across <strong>6 model configurations</strong> on 40 test queries, using an LLM judge that scores each factual claim against a frozen data snapshot.</li>
+                        <li>With tools, answers were <strong>99%</strong> accurate. Without them, <strong>57%</strong> of claims couldn't be checked against park data and 6% were wrong.</li>
+                        <li>Ran <strong>14 safety tests</strong>, including prompt injection through fake park alerts. The judge was checked against my own hand labels (Cohen's kappa 0.61).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row-publication">
+                <div class="publication-header">
+                    <div class="pub-meta" style="margin-left: 0;">
+                        <div>
                             <h3 class="paper-title">ExploreBench</h3>
                             <ul>
                                 <li><a href="https://github.com/SShahparnia/cmpe249_project" class="fa-brands fa-github" aria-label="GitHub repo"></a></li>
@@ -253,6 +271,22 @@
                 <div class="publication-summary">
                     Course project (CMPE 249 Intelligent Autonomous Systems) with Joey Manivong and Aaron Sam. A reproducible <strong>benchmarking harness</strong> for 2D autonomous exploration in <strong>ROS 2 Jazzy</strong> and <strong>Gazebo Harmonic</strong>, comparing four frontier-selection strategies behind one common interface.
                     A controlled study of about <strong>1,300 simulated episodes</strong> across five environment topologies reports coverage over time and distance with bootstrap confidence intervals. It also profiles each strategy's decision latency, memory, and power <strong>hardware-in-the-loop</strong> on a Jetson Orin Nano. I own simulation and infrastructure, evaluation, and the Jetson deployment.
+                </div>
+            </div>
+            <div class="row-publication">
+                <div class="publication-header">
+                    <div class="pub-meta" style="margin-left: 0;">
+                        <div>
+                            <h3 class="paper-title">CMPE249_HW2_2D: Zero-Shot COCO → KITTI Detection</h3>
+                            <ul>
+                                <li><a href="https://github.com/SShahparnia/CMPE249_HW2_2D" class="fa-brands fa-github" aria-label="GitHub repo"></a></li>
+                            </ul>
+                            <h4 class="paper-journal">2026 · CMPE 249 · PyTorch, Ultralytics, pycocotools</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-summary">
+                    A reproducible benchmark of <strong>YOLOv8</strong>, <strong>YOLO11</strong>, and <strong>RT-DETR</strong> object detectors trained only on <strong>COCO</strong> and tested without fine-tuning on the <strong>KITTI</strong> driving dataset. It measures how much accuracy drops on new data, broken down by class and object size, and compares speed against accuracy. RT-DETR scored highest (52.8 AP on COCO) and YOLOv8 ran fastest (73 FPS on an RTX 3060). Person detection dropped about 43 AP on KITTI, while cars barely changed.
                 </div>
             </div>
             <div class="row-publication">
