@@ -24,8 +24,13 @@
                     <li><a href="#sec-projects">Projects</a></li>
                     <li><a href="#sec-skills">Skills</a></li>
                     <li><a href="blog/">Blog</a></li>
-                    <li><a href="climbing/">Climbing</a></li>
-                    <li><a href="achievements/">Achievements</a></li>
+                    <li class="nav-dropdown">
+                        <a href="climbing/">Climbing</a>
+                        <ul class="nav-submenu">
+                            <li><a href="climbing/">Trip Reports</a></li>
+                            <li><a href="achievements/">Achievements</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <button type="button" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
                     <span class="icon-sun" aria-hidden="true">☀</span>
@@ -150,6 +155,19 @@
 
         <section id="sec-projects">
             <h2>Personal Projects</h2>
+            <div class="row-publication">
+                <div class="publication-header">
+                    <div class="pub-meta" style="margin-left: 0;">
+                        <div>
+                            <h3 class="paper-title">TripPlanner (iOS App)</h3>
+                            <h4 class="paper-journal">2026 · Swift, SwiftUI, SwiftData, MapKit</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-summary">
+                    A personal <strong>iOS</strong> trip-planning app built in <strong>SwiftUI</strong>. It plans trips day by day on an <strong>Apple Maps</strong> view with travel times between stops, and has a Today screen for the current day. It imports saved places from almost any spreadsheet, pulls in bookings, and tracks expenses with currency conversion. Each place links to its Google reviews and to <strong>Tabelog</strong> for restaurant reservations in Japan, and whole trips can be shared as one CSV file. All data stays on the device.
+                </div>
+            </div>
             <div class="row-publication">
                 <div class="publication-header">
                     <div class="pub-meta" style="margin-left: 0;">

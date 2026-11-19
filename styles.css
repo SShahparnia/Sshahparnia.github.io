@@ -795,3 +795,43 @@ body.dark {
   text-align: center;
   color: var(--font-muted);
 }
+
+/* Climbing dropdown in nav */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-submenu {
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: -0.75rem;
+  flex-direction: column;
+  min-width: 9.5rem;
+  padding: 0.4rem 0;
+  margin-top: 0.4rem;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  z-index: 2;
+}
+
+/* Invisible bridge so the menu stays open while the pointer moves down to it */
+.nav-submenu::before {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+}
+
+.nav-dropdown:hover .nav-submenu,
+.nav-dropdown:focus-within .nav-submenu {
+  display: flex !important;
+}
+
+.nav-bar .nav-submenu li {
+  padding: 0.2rem 0.75rem;
+  white-space: nowrap;
+}
